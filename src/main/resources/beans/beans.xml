@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+
+	<import resource="classpath:/nadron/beans/server-beans.xml"></import>
+	<context:annotation-config />
+
+	<bean id="webSocketLoginHandler" class="com.bbl.app.handlers.GameLoginHandler">
+		<property name="lookupService" ref="lookupService" />
+		<property name="idGeneratorService" ref="simpleUniqueIdGenerator" />
+		<property name="reconnectRegistry" ref="reconnectSessionRegistry" />
+		<property name="jackson" ref="jackson" />
+	</bean>
+	
+</beans>
