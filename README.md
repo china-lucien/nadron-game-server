@@ -1,5 +1,5 @@
 # nadron-game-server
-
+```
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,3 +30,4 @@ function messageHandler(e){
 <body>
 </body>
 </html>
+```
